@@ -53,10 +53,10 @@ export default {
             .then(res => {
               // 解构
               const {data, meta} = res.data
-              if (meta.status == 200) {
+              if (meta.status === 200) {
                 window.localStorage.setItem('token', data.token)
                 this.$message({
-                  message: '登入成功',
+                  message: '欢迎回来',
                   type: 'success'
                 })
                 this.$router.push('/home')
